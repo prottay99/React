@@ -1,0 +1,8 @@
+.kg-item {
+  background-color: khaki;
+  display: flex;
+  justify-content: space-between;
+}
+.kg-btn {
+  float: right;
+}
