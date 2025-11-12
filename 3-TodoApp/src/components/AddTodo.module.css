@@ -1,0 +1,11 @@
+.addTodoContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  gap: 40px;
+}
+.addTodoInput input {
+  width: 400px;
+  font-size: 18px;
+}
