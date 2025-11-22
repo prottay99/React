@@ -1,60 +1,29 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./Todo.css";
-import { TiTick } from "react-icons/ti";
-import { IoTrashBinOutline } from "react-icons/io5";
 import TodoForm from "./TodoForm";
+import TodoDate from "./TodoDate";
+import TodoItem from "./TodoItem";
+import { getLocalStorageData, setLocalStorageData } from "./TodosLocalStorage";
 
 const Todo = () => {
-  const [todos, setTodos] = useState([]);
-  const [dateTime, setDateTime] = useState("");
+  const [todos, setTodos] = useState(() => getLocalStorageData());
 
   // input comes form TodoForm by stateLifting
   const getInput = (input) => {
-    if (todos.includes(input)) return;
-    setTodos((prev) => [input, ...prev]);
+    const { id, content, checked } = input;
+
+    // if (todos.includes(input.content)) return;
+    const ifTodoContentMatched = todos.find((todo) => todo.content === content);
+
+    if (ifTodoContentMatched) return;
+
+    setTodos((prev) => [{ id, content, checked }, ...prev]);
   };
-
-  // const handleChange = (e) => {
-  //   setInput(e.target.value);
-  // };
-
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-
-  //   if (!input) return;
-
-  //   if (todos.includes(input)) {
-  //     setInput("");
-  //     return;
-  //   }
-
-  //   setTodos((prev) => [...prev, input]);
-  //   setInput("");
-  // };
-
-  // Date and time functionality
-
-  // const interval = setInterval(() => {
-  //   const now = new Date();
-  //   const date = now.toLocaleDateString();
-  //   const time = now.toLocaleTimeString();
-  //   setDateTime(`${date} - ${time}`);
-  // }, 1000);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      const now = new Date();
-      const date = now.toLocaleDateString();
-      const time = now.toLocaleTimeString();
-      setDateTime(`${date} - ${time}`);
-    }, 1000);
-
-    return () => clearInterval(interval);
-  }, []);
 
   // delete a todo
   const handleDelete = (currTodo) => {
-    const newtodos = todos.filter((todo) => todo !== currTodo);
+    const newtodos = todos.filter((todo) => todo.id !== currTodo.id);
+
     setTodos(newtodos);
   };
 
@@ -63,34 +32,45 @@ const Todo = () => {
     setTodos([]);
   };
 
+  // cheacked functionality
+  const handleChecked = (checkedTodo) => {
+    const updatedTodos = todos.map((todo) => {
+      if (todo.id === checkedTodo.id) {
+        return {
+          ...todo,
+          checked: !todo.checked,
+        };
+      } else {
+        return todo;
+      }
+    });
+    setTodos(updatedTodos);
+  };
+
+  setLocalStorageData(todos);
+
   return (
     <div className="todo-container">
       <header>
         <h1>Todo List</h1>
+        <TodoDate />
       </header>
-      <div>
-        <h2 className="date-time">{dateTime}</h2>
-      </div>
+
       <div className="form">
         <TodoForm getInput={getInput} />
       </div>
 
       <div className="myUnOrdList">
         <ul>
-          {todos.map((todo, index) => {
+          {todos.map((todo) => {
             return (
-              <li key={index} className="todo-item">
-                <span>{todo}</span>
-                <button className="check-btn">
-                  <TiTick />
-                </button>
-                <button
-                  className="delete-btn"
-                  onClick={() => handleDelete(todo)}
-                >
-                  <IoTrashBinOutline />
-                </button>
-              </li>
+              <TodoItem
+                key={todo.id}
+                todo={todo}
+                checked={todo.checked}
+                handleDelete={handleDelete}
+                handleChecked={handleChecked}
+              />
             );
           })}
         </ul>

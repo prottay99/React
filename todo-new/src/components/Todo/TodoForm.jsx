@@ -1,27 +1,32 @@
+import { nanoid } from "nanoid";
 import React, { useState } from "react";
 
+const init = {
+  id: "",
+  content: "",
+  isChecked: false,
+};
+
 const TodoForm = ({ getInput }) => {
-  const [input, setInput] = useState("");
+  const [input, setInput] = useState({ ...init });
 
   const handleChange = (e) => {
-    setInput(e.target.value);
+    // setInput({
+    //   ...input,
+    //   content: e.target.value,
+    //   id: nanoid(),
+    // });
+    const value = e.target.value;
+
+    setInput({ id: nanoid(), content: value, checked: false });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    if (!input) return;
-
+    if (!input.content) return;
     getInput(input);
-
-    // if (todos.includes(input)) {
-    //   setInput("");
-    //   return;
-    // }
-
-    // setTodos((prev) => [...prev, input]);
-
-    setInput("");
+    // setInput({ id: "", content: "", checked: false });
+    setInput({ ...init });
   };
 
   return (
@@ -31,7 +36,7 @@ const TodoForm = ({ getInput }) => {
           type="text"
           className="todo-input"
           autoComplete="off"
-          value={input}
+          value={input.content}
           onChange={handleChange}
         />
       </div>
