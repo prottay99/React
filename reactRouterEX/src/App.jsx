@@ -5,12 +5,15 @@ import { Home } from "./pages/Home";
 import { About } from "./pages/About";
 import { Contact } from "./pages/Contact";
 import { Movies } from "./pages/Movies";
+import { ErrorPage } from "./pages/ErrorPage";
+import { getApiData } from "./api/getApiData";
 
 const App = () => {
   const router = createBrowserRouter([
     {
       path: "/",
       element: <AppLayout />,
+      errorElement: <ErrorPage />,
       children: [
         {
           path: "/",
@@ -23,6 +26,7 @@ const App = () => {
         {
           path: "/movies",
           element: <Movies />,
+          loader: getApiData,
         },
         {
           path: "/contact",
