@@ -1,6 +1,12 @@
 import { deletePost } from "../api/PostApi";
 
-export const Card = ({ curElem, data, setData }) => {
+export const Card = ({
+  curElem,
+  data,
+  setData,
+  setUpdateDataApi,
+  updateDataApi,
+}) => {
   const { id, title, body } = curElem;
 
   const handlePostDelete = async (id) => {
@@ -17,13 +23,17 @@ export const Card = ({ curElem, data, setData }) => {
     }
   };
 
+  const handleUpdatePost = (curElem) => setUpdateDataApi(curElem);
+
   return (
     <li className="card">
       <p>ID: {id}</p>
       <p>Title: {title}</p>
       <p>Body: {body}</p>
       <div className="buttons">
-        <button className="btn">Edit</button>
+        <button className="btn" onClick={() => handleUpdatePost(curElem)}>
+          Edit
+        </button>
         <button className="btn" onClick={() => handlePostDelete(id)}>
           Delete
         </button>
