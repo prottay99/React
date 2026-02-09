@@ -4,13 +4,13 @@ const api = axios.create({
   baseURL: "https://jsonplaceholder.typicode.com",
 });
 
-// get method
-export const getPost = () => {
+// get data
+export const getPostData = () => {
   return api.get("/posts");
 };
 
-// delete method
-export const deletePost = (id) => {
+// delete data
+export const deletePostData = (id) => {
   return api.delete(`/posts/${id}`);
 };
 
@@ -19,7 +19,7 @@ export const postData = (post) => {
   return api.post("/posts", post);
 };
 
-//put method
+// PUT method
 export const updateData = (id, post) => {
   return api.put(`/posts/${id}`, post);
 };
