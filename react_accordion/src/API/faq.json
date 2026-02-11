@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "question": "What is the purpose of this service?",
+    "answer":
+      "This service is designed to provide quick, reliable information and support, helping users solve problems, learn new things, and access resources efficiently."
+  },
+  {
+    "id": 2,
+    "question": "How can I create an account?",
+    "answer":
+      "You can create an account by clicking the 'Sign Up' button on the homepage, entering your details, and verifying your email address."
+  },
+  {
+    "id": 3,
+    "question": "Is my personal information secure?",
+    "answer":
+      "Yes, your information is protected with industry-standard encryption and privacy safeguards to ensure your data remains safe."
+  },
+  {
+    "id": 4,
+    "question": "How do I reset my password?",
+    "answer":
+      "Simply click 'Forgot Password' on the login page, enter your registered email, and follow the instructions sent to your inbox."
+  },
+  {
+    "id": 5,
+    "question": "Can I access the service on mobile devices?",
+    "answer":
+      "Absolutely. The service is optimized for both desktop and mobile, and you can also download the mobile app for a smoother experience."
+  },
+  {
+    "id": 6,
+    "question": "Who do I contact for customer support?",
+    "answer":
+      "You can reach customer support through the 'Help' section on the website or by emailing the support team directly."
+  }
+]

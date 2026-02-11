@@ -1,0 +1,55 @@
+html {
+  background-color: #202020;
+  color: #fff;
+}
+ul {
+  list-style-type: none;
+}
+.accordion_container {
+  max-width: 900px;
+  width: 100%;
+  margin: auto;
+}
+.single_faq {
+  padding: 10px 20px;
+  background-color: #2c361f;
+  margin-bottom: 20px;
+  border-left: 1px solid #fff;
+}
+.single_faq > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.btn {
+  padding: 10px 20px;
+  background-color: aqua;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.active-btn {
+  padding: 10px 20px;
+  background-color: red;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #fff;
+}
+.active-btn:hover {
+  box-shadow: 0px 0px 15px 0px rgba(233, 70, 70, 0.425);
+  /* color: #fff; */
+}
+.btn:hover {
+  box-shadow: 0px 0px 15px 0px rgba(0, 255, 255, 0.425);
+  /* color: #fff; */
+}
+.heading {
+  text-align: center;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
