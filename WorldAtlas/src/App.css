@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Urbanist", sans-serif;
+}
+body {
+  background-color: #111111;
+  color: #fff;
+}
+p,
+a {
+  font-size: 17px;
+  text-decoration: none;
+  color: #fff;
+}
+li {
+  list-style-type: none;
+}
+
+/* Layout  */
+
+.container {
+  max-width: 140rem;
+  margin: auto;
+}
+
+.grid {
+  display: grid;
+}
+.grid-two-cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+.grid-three-cols {
+  grid-template-columns: repeat(3, 1fr);
+}
+.grid-four-cols {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* Layout  */
+
+/* Header  */
+header {
+  height: 10rem;
+  /* border-bottom: 1px solid #ffffff23; */
+  background-color: #212121;
+  width: 100%;
+
+  & .container {
+    height: 10rem;
+  }
+}
+
+.navbar-grid {
+  grid-template-columns: 0.5fr 1fr;
+  align-items: center;
+  height: 10rem;
+  padding: 0 3.2rem;
+}
+nav ul {
+  display: flex;
+  justify-content: flex-end;
+  gap: 3.2rem;
+
+  & li:hover {
+    text-decoration: underline;
+    text-underline-offset: 6px;
+    text-decoration-thickness: 2px;
+  }
+}
+.active-link {
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  text-decoration-thickness: 2px;
+}
+
+.ham-menu {
+  display: none;
+}
