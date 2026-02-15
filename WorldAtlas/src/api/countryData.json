@@ -1,0 +1,65 @@
+[
+  {
+    "id": 1,
+    "countryName": "Bangladesh",
+    "capital": "Dhaka",
+    "population": 173000000,
+    "interestingFact": "It has the largest river delta in the world."
+  },
+  {
+    "id": 2,
+    "countryName": "Japan",
+    "capital": "Tokyo",
+    "population": 124000000,
+    "interestingFact": "Japan is made up of over 6,800 islands."
+  },
+  {
+    "id": 3,
+    "countryName": "Brazil",
+    "capital": "Brasília",
+    "population": 203000000,
+    "interestingFact": "Home to the Amazon Rainforest, the largest in the world."
+  },
+  {
+    "id": 4,
+    "countryName": "Canada",
+    "capital": "Ottawa",
+    "population": 40000000,
+    "interestingFact": "It has the longest coastline of any country."
+  },
+  {
+    "id": 5,
+    "countryName": "Egypt",
+    "capital": "Cairo",
+    "population": 110000000,
+    "interestingFact": "The Great Pyramid of Giza is the only surviving ancient wonder."
+  },
+  {
+    "id": 6,
+    "countryName": "Australia",
+    "capital": "Canberra",
+    "population": 27000000,
+    "interestingFact": "It is home to unique wildlife like kangaroos and koalas."
+  },
+  {
+    "id": 7,
+    "countryName": "Germany",
+    "capital": "Berlin",
+    "population": 84000000,
+    "interestingFact": "Germany is famous for its Autobahn, which has stretches with no speed limit."
+  },
+  {
+    "id": 8,
+    "countryName": "India",
+    "capital": "New Delhi",
+    "population": 1440000000,
+    "interestingFact": "India is the world’s largest democracy."
+  },
+  {
+    "id": 9,
+    "countryName": "Kenya",
+    "capital": "Nairobi",
+    "population": 56000000,
+    "interestingFact": "Kenya is known for its wildlife safaris and the Great Rift Valley."
+  }
+]

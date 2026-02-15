@@ -1,0 +1,17 @@
+[
+  {
+    "icon": "MdPlace",
+    "title": "Find us",
+    "details": "Dhaka, Bangladesh"
+  },
+  {
+    "icon": "IoCallSharp",
+    "title": "Call us",
+    "details": "54565165165"
+  },
+  {
+    "icon": "TbMailPlus",
+    "title": "Mail us",
+    "details": "contact@gmail.com"
+  }
+]
