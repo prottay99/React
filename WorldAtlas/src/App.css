@@ -94,6 +94,11 @@ nav ul {
 
 .ham-menu {
   display: none;
+
+  & svg {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
 }
 
 .hero-section .container {
@@ -147,6 +152,38 @@ nav ul {
     gap: 4rem;
   }
   .country-container {
+    grid-template-columns: 1fr 1fr;
+  }
+  .menu-web {
+    display: none;
+  }
+  .ham-menu {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .menu-mobile {
+    position: absolute;
+    top: 10rem;
+    left: 0;
+    background-color: #292929;
+    width: 100%;
+    box-shadow: rgba(104, 104, 104, 0.25) 0px 14px 28px;
+    transition: all 0.3s;
+  }
+  .menu-mobile ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & li:first-child {
+      margin-top: 2rem;
+    }
+
+    & li:last-child {
+      margin-bottom: 2rem;
+    }
+  }
+  .navbar-grid {
     grid-template-columns: 1fr 1fr;
   }
 }
@@ -257,6 +294,13 @@ nav ul {
   margin-bottom: 2rem;
 }
 
+/* country details page  */
+.country-detail-page .container {
+  padding: 7rem 3.2rem;
+  gap: 3rem;
+  align-items: center;
+}
+
 /* footer  */
 .footer {
   border-top: 1px solid #333;
@@ -290,8 +334,51 @@ nav ul {
   padding: 3rem 3.2rem 1rem;
 }
 
+/* filter part css  */
+.filter_part {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem 3.2rem 2rem;
+
+  & input {
+    padding: 2rem;
+    border-radius: 50px;
+    border: 1px solid #ffffff8a;
+    background-color: transparent;
+    color: #fff;
+    outline: none;
+
+    &:focus {
+      background-color: #ffffff1f;
+    }
+  }
+}
+#select-field {
+  padding: 1rem;
+  border-radius: 50px;
+  border: 1px solid #ffffff8a;
+  background-color: transparent;
+  color: rgb(62, 62, 255);
+  outline: none;
+
+  &option {
+    color: red;
+  }
+}
+
 /* loader */
+
 /* HTML: <div class="loader"></div> */
+
+.loader-container {
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .loader {
   width: 50px;
   aspect-ratio: 1;
@@ -322,4 +409,8 @@ nav ul {
   100% {
     transform: rotate(1turn);
   }
+}
+
+.back_btn {
+  margin-top: 3rem;
 }
