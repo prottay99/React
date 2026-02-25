@@ -37,14 +37,25 @@ export const GenarateColor = () => {
         textAlign: "center",
       }}
     >
-      <button onClick={() => setTypeOfColor("hex")}>Create HEX Color</button>
-      <button onClick={() => setTypeOfColor("rgb")}>Create RGB Color</button>
+      <button
+        onClick={() => setTypeOfColor("hex")}
+        style={{ padding: "10px 25px", marginRight: "10px", cursor: "pointer" }}
+      >
+        Create HEX Color
+      </button>
+      <button
+        onClick={() => setTypeOfColor("rgb")}
+        style={{ padding: "10px 25px", marginRight: "10px", cursor: "pointer" }}
+      >
+        Create RGB Color
+      </button>
       <button
         onClick={
           typeOfColor === "hex"
             ? handleGenerateRandomHexColor
             : handleGenerateRandomRgbColor
         }
+        style={{ padding: "10px 25px", marginRight: "10px", cursor: "pointer" }}
       >
         Generate random color
       </button>
