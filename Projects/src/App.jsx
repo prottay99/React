@@ -1,5 +1,6 @@
 import "./App.css";
 import { GenarateColor } from "./components/Color Genarator/GenarateColor";
+import { ImageSlider } from "./components/ImageSlider/ImageSlider";
 import { StarRating } from "./components/star-rating/StarRating";
 
 function App() {
@@ -8,7 +9,11 @@ function App() {
       {/* random color generator */}
       {/* <GenarateColor /> */}
 
-      <StarRating noOfStars={10} />
+      {/* star rating  */}
+      {/* <StarRating noOfStars={10} /> */}
+
+      {/* Image slider  */}
+      <ImageSlider url={`https://picsum.photos/v2/list`} limit={"10"} />
     </>
   );
 }
