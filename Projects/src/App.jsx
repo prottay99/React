@@ -6,6 +6,7 @@ import { StarRating } from "./components/star-rating/StarRating";
 import { TreeView } from "./components/TreeView/TreeView";
 import menus from "./components/TreeView/data";
 import { QrCode } from "./components/QR code Generator/QrCode";
+import { LightDarkMode } from "./components/LightDarkMode/LightDarkMode";
 
 function App() {
   return (
@@ -26,7 +27,10 @@ function App() {
       {/* <TreeView menus={menus} /> */}
 
       {/* QR Code Generator  */}
-      <QrCode />
+      {/* <QrCode /> */}
+
+      {/* theme mode  */}
+      <LightDarkMode />
     </>
   );
 }
