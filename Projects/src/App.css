@@ -10,3 +10,33 @@
 /* .menu-list-container li {
   list-style: unset;
 } */
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.tabs-container {
+  max-width: 800px;
+  width: 100%;
+  margin: 5rem auto;
+}
+.tab-item {
+  padding: 0.8rem 1.5rem;
+  background-color: #222;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    background-color: aqua;
+    color: #222;
+  }
+}
+
+.tab-content {
+  margin-top: 2rem;
+  padding: 2rem;
+  border: 1px dashed #111;
+}

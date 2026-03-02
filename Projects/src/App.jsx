@@ -7,6 +7,8 @@ import { TreeView } from "./components/TreeView/TreeView";
 import menus from "./components/TreeView/data";
 import { QrCode } from "./components/QR code Generator/QrCode";
 import { LightDarkMode } from "./components/LightDarkMode/LightDarkMode";
+import { Tabs } from "./components/Tabs/Tabs";
+import { ModalTest } from "./components/Modal/ModalTest";
 
 function App() {
   return (
@@ -30,7 +32,13 @@ function App() {
       {/* <QrCode /> */}
 
       {/* theme mode  */}
-      <LightDarkMode />
+      {/* <LightDarkMode /> */}
+
+      {/* Tabs  */}
+      <Tabs />
+
+      {/* Modal Popup  */}
+      <ModalTest />
     </>
   );
 }
