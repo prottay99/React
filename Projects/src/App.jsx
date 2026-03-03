@@ -9,6 +9,7 @@ import { QrCode } from "./components/QR code Generator/QrCode";
 import { LightDarkMode } from "./components/LightDarkMode/LightDarkMode";
 import { Tabs } from "./components/Tabs/Tabs";
 import { ModalTest } from "./components/Modal/ModalTest";
+import { SearchAutocomplete } from "./components/Search Autocomplete/SearchAutocomplete";
 
 function App() {
   return (
@@ -35,10 +36,13 @@ function App() {
       {/* <LightDarkMode /> */}
 
       {/* Tabs  */}
-      <Tabs />
+      {/* <Tabs /> */}
 
       {/* Modal Popup  */}
-      <ModalTest />
+      {/* <ModalTest /> */}
+
+      {/* search autocomplete  */}
+      <SearchAutocomplete />
     </>
   );
 }
